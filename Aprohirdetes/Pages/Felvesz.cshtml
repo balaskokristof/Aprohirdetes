@@ -1,0 +1,21 @@
+﻿@page
+@model Aprohirdetes.Pages.FelveszModel
+@{
+	Layout = "_Layout";
+}
+
+<h1>Egy új apróhirdetés felvétele</h1>
+<form method="post">
+
+	<label for="cim">Hirdetés címe</label><br>
+		<input type="text" class="form-control" id="hirdcim" name="Cim" placeholder="Hirdetes cime"> <br>
+		<label for="Leiras">Leírás</label> <br>
+		<input type="text" class="form-control" id="Leiras" placeholder="Leírás" name="Leiras"> <br>
+		<label for="helyszin">Helyszín</label> <br> <br>
+		<input type="text" class="form-control" id="helyszin" placeholder="Helyzin" name="Helyszin"/> <br>
+		<label for="email">Email</label> <br>
+		<input type="text" class="form-control" id="email" placeholder="Email" name="Email"> <br>
+	@Html.AntiForgeryToken()
+		<input type="submit" value="Hirdetés felvétele!"/> 
+
+	</form>

@@ -1,0 +1,63 @@
+﻿@page
+@model Aprohirdetes.Pages.ListazModel
+@{
+Layout = "_Layout";
+}
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<h2>Apróhirdetések listája:</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Azonosító</th>
+            <th>Cím</th>
+            <th>Leírás</th>
+            <th>Helyszín</th>
+            <th>Email</th>
+            <th>Megjelenés dátuma</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.lista)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Cim</td>
+                <td>@item.Leiras</td>
+                <td>@item.Helyszin</td>
+                <td>@item.Email</td>
+                <td>@item.Megjelenes</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+

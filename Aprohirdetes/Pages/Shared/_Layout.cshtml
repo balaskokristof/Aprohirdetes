@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="topnav">
+  <a class="active" href="/">Apróhirdetések</a>
+  <a href="/Felvesz">Hirdetés felvétele</a>
+  <a href="/Listaz">Hirdetések megejelenítése</a>
+</div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+<style>
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: lightblue;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: blue;
+  color: white;
+}
+</style>
+</html>
